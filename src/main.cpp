@@ -40,7 +40,7 @@ void initTests() {
     tests.push_back(testIsRed_3);
 }
 
-int launchTests() {
+static int launchTests() {
     int total = 0;
     int passed = 0;
     int failed = 0;
@@ -60,6 +60,8 @@ int launchTests() {
 
     std::cout << "\ntests " << failed << '/' << total << " failed!\n";
     std::cout << "tests " << passed << '/' << total << " passed!\n";
+
+    std::cin.get();
 
     /* 0 = success */
     return total - passed;
